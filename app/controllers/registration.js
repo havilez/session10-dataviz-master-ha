@@ -15,6 +15,15 @@ graphApp.controller("registration",
 			}); // login
 	} // end function
 
+	$scope.logoff = function(){
+			Authentication.logoff($scope.user)
+			.then(function(user){
+				$location.path("/login");
+			}).catch(function(error){
+				$scope.message = error.message;
+			}); // login
+	} // end function
+
 	$scope.register = function() {
 		Authentication.register($scope.user)
 		.then(function(user){

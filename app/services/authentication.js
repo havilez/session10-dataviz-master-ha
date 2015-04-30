@@ -17,6 +17,11 @@ graphApp.factory('Authentication',
 					password: user.password
 				}); // authwithpassword
 			}, // login
+			logoff: function(user) {
+				this.username = "";
+				return ref.unauth();
+			  
+			}, // logoff
 			register: function(user) {
 				this.username = user.email;
 				return auth.$createUser({

@@ -18,6 +18,10 @@ graphApp.config(["$routeProvider", function($routeProvider) {
 		templateUrl: "partials/register.html",
 		controller: "registration"
 	}).
+	when("/logoff", {
+		templateUrl: "partials/login.html",
+		controller: "registration"
+	}).
 	otherwise({
 		redirectTo: "/login"
 	});
